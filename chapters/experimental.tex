@@ -1,0 +1,79 @@
+\chapter{Experimental}
+
+\lipsum[7]
+
+\section{Something about the experiment }
+
+\lipsum[8]
+ 
+\subsection{A subsection with a table } 
+
+\lipsum[9-10]
+
+
+\vspace{7pt}
+\begin{table}[!h]
+	\centering
+	\ra{1.1}
+	\caption{The comparison of published desorption energy and pre-exponential factor of 6P multilayer with the ones obtained from manual linear heating and passive cooling of the 6P powder. The values of kinetic parameters calculated using heating curves obtained based on different assumptions.}
+	\label{arr_tab_6p}
+	\vspace{-5pt}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{@{}lS[table-format=1.3]S@{}}
+			\doublerule
+			& {Desorption energy (\si{\electronvolt})}   & {Pre-exponential factor (\si{\per \second})}    \\
+			\midrule
+			Manual linear heating       & 3.54(2) & \SI{6.2(5)E33}{}   \\
+			Manual linear heating  (different assumptions)      &  &    \\
+			\hspace{1cm}Linear region after \SI{2}{min}, offset \SI{30}{\celsius}       & 3.93(2) & \SI{2.8(2)E35}{} \\
+			\hspace{1cm}Linear region after \SI{2}{min}, offset \SI{-30}{\celsius}        & 3.18(2) &  \SI{1.4(1)E32}{} \\
+			\hspace{1cm}Linear region after \SI{3}{min}, offset \SI{0}{\celsius}     & 2.84(2) & \SI{2.8(2)E27}{} \\		
+			\hspace{1cm}Linear region after \SI{1}{min}, offset \SI{0}{\celsius}   & 4.10(2) & \SI{6.4(5)E38}{} \\
+			Manual linear heating  (with estimated error)      & 3.5(7)  & \phantom{(0.00..)}{$6 \times 10^{33(5)}$}  \\ \midrule
+			Passive cooling       & 3.17(2) & \SI{2.4\pm0.2E32}{} \\
+			Passive cooling   (with estimated error)      & 3.2(2)  & \phantom{(0.00..)}{$2 \times 10^{32(1)}$}  \\ \midrule
+			6P multilayer, A. Winkler (2015)    & 2.4     & \phantom{(00.)}\SI{6E25}{} \\
+			\bottomrule   
+	\end{tabular}}
+\end{table}
+
+
+
+\textbf{The table shows how one can use the SI package to align values in a column to a symbol or a decimal point. }
+
+
+
+\subsection{A giant complicated table for a whole page}
+
+\lipsum[61]
+
+
+\begingroup
+\renewcommand*{\arraystretch}{1.4}
+
+\begin{sidewaystable}[]
+	\centering
+	\ra{1.1}	
+	\caption{Summary of the used annealing methods describing their characteristics in the context of oxide reduction experiments.}
+	\label{annealing-summary}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{@{}lllllll@{}}\doublerule
+			Annealing method                                                          & Sample                                                            & Max temp. of sample                                                                                                                                                                     & Temp. uniformity                                                                   & Temp. of getter                                                                                                       & Cleanliness                                                                & ELOP usefulness                                                   \\ \midrule
+			\begin{tabular}[c]{@{}l@{}}Current through\\ sample \\ \\ \phantom{empty}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Monocrystal\\ \\ \\ \phantom{empty}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Depending on type of crystals\\ and luck, for \ce{TiO2} on\\ Si \textgreater{}\SI{1350}{\degreeCelsius}, for \ce{SrTiO3} on Si \SI{1250}{\degreeCelsius}\\ was achieved\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Relatively uniform\\ below \SI{1050}{\degreeCelsius}\\ (approx. \SI{30}{\degreeCelsius})\\ \\ \phantom{empty}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Unknown, but higher\\ than the studied\\ sample's*\\ \phantom{empty}\end{tabular}                                   & \begin{tabular}[c]{@{}l@{}}Clean\\ \\ \\ \phantom{empty}\end{tabular}                & \begin{tabular}[c]{@{}l@{}}Useful \\ \\ \\ \phantom{empty}\end{tabular}     \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Electron beam\\ holder\\ \\ \phantom{empty}\end{tabular}    & \begin{tabular}[c]{@{}l@{}}Monocrystal\\ \\ \\ \phantom{empty}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Temp. of sample above \textgreater{}\SI{1350}{\degreeCelsius},\\ temperatures of \SI{1668}{\degreeCelsius}  reached\\ (melting temp of Ti), high temp\\ can be reached without difficulty\end{tabular} & \begin{tabular}[c]{@{}l@{}}Relatively uniform\\ below \SI{1050}{\degreeCelsius}\\ (approx. \SI{30}{\degreeCelsius})\\ \\ \phantom{empty}\end{tabular}  & \begin{tabular}[c]{@{}l@{}}Known, in case of\\ silicon. The same as\\ sample, in case of Ti\\ much higher\end{tabular} & \begin{tabular}[c]{@{}l@{}}Clean\\ \\ \\ \phantom{empty}\end{tabular}                & \begin{tabular}[c]{@{}l@{}}Very useful\\ \\ \\ \phantom{empty}\end{tabular} \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Quartz tube\\  \phantom{empty}\end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Monocrystal\\ or powder\end{tabular}    & \begin{tabular}[c]{@{}l@{}}\SI{1150}{\degreeCelsius} can be reached, but above\\ \SI{1000}{\degreeCelsius} Si contamination\end{tabular}                                                                                         & \begin{tabular}[c]{@{}l@{}}Uniform\\ \phantom{empty}\end{tabular}                            & \begin{tabular}[c]{@{}l@{}}Known,\\ the same as sample\end{tabular}                                                  & \begin{tabular}[c]{@{}l@{}}\textgreater{}\SI{1000}{\degreeCelsius}\\ signs of Si\end{tabular} & \begin{tabular}[c]{@{}l@{}}Limited\\ usefulness**\end{tabular}      \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Crucible\\ \phantom{empty}\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Monocrystal\\ or powder\end{tabular}    & \begin{tabular}[c]{@{}l@{}}\SI{1450}{\degreeCelsius} was reached \\ \phantom{empty}\end{tabular}                                                                                                                 & \begin{tabular}[c]{@{}l@{}}Uniform\\ \phantom{empty}\end{tabular}                            & \begin{tabular}[c]{@{}l@{}}Known,\\ the same as sample\end{tabular}                                                  & \begin{tabular}[c]{@{}l@{}}Clean at least\\ till \SI{1450}{\degreeCelsius}***\end{tabular}        & \begin{tabular}[c]{@{}l@{}}Limited\\ usefulness**\end{tabular}     \\ \bottomrule 
+		\end{tabular}}
+		\begin{tablenotes}
+			\small
+			\item *The temperature measurement is performed using a pyrometer and the getter crystal is placed under the studied crystal, so its temperature cannot be measured. The getter's temperature is higher than the sample's temperature, as indicated by the color of glowing and the fact that it partially melts even when the temperature of the sample is lower than the getter's melting temperature. 
+			\item **The experiments have shown that the getter should have much higher temperature than the perovskite crystal in the study of the growth of nanostructures. When the getter temperature is raised enough for the getter to be active, the temperature of the crystal is so high that the structures are badly defined and contaminated. 
+			\item ***The annealing in this method is due to radiation from tungsten wires. It must      be noted that at      high temperatures, tungsten wires begin to sublimate. Contamination with heavy metals was  observed on the surface of monocrystals at high currents passing through wires in another heating system based on the same principle.
+		\end{tablenotes}	
+\end{sidewaystable}
+
+\endgroup
+
+
+
+
