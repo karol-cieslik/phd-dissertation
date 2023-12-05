@@ -1,0 +1,211 @@
+% Dissertation LaTeX Template
+% Author: Karol Cieslik
+% LinkedIn: https://www.linkedin.com/in/karolcieslik/
+% I have developed this template over the years.
+% I hope that it will be useful for others. 
+% It works both for thesis in English and in Polish.
+
+\documentclass[11pt,twoside]{report}
+\usepackage[left=35mm,top=25mm,right=25mm,bottom=25mm]{geometry}
+\usepackage{indentfirst}
+\usepackage{polski}
+\usepackage[polish,english]{babel}
+\usepackage{amsmath} % Required for some math elements 
+\usepackage[titletoc]{appendix}
+\usepackage{rotating} 
+\usepackage[
+protrusion=true,
+activate={true,nocompatibility},
+final,
+tracking=true,
+kerning=true,
+spacing=true,
+factor=1100]{microtype}
+\SetTracking{encoding={*}, shape=sc}{40}
+\newsavebox{\myhbar}
+\savebox{\myhbar}{$\hbar$}
+\renewcommand*{\hbar}{\mathalpha{\usebox{\myhbar}}}
+\usepackage[utf8]{inputenc}
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\setlength\parindent{0.75cm}
+\linespread{1.15}
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
+\pagestyle{fancy}
+\fancyhead[L]{\scshape\nouppercase{\rightmark}}
+\setlength{\headheight}{13pt} 
+\usepackage{titlesec}
+ \titleformat{\chapter}[display]   
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+\usepackage{caption}
+\usepackage[font={small}]{caption}
+\usepackage{enumerate}
+\usepackage{multirow}
+ \graphicspath{{wykresy/}}
+   \usepackage[unicode=true]{hyperref}
+\renewcommand\refname{Bibliografia}
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 
+
+% In the SI package you can declare your own units which comes in handy
+\DeclareSIUnit{\ions}{ions} 
+\DeclareSIUnit{\langmuir}{L} 
+
+
+
+\usepackage{hypcap}
+\usepackage{booktabs}
+\newcommand\doubleRule{\toprule\toprule}
+\newcommand\doublerule{\toprule\specialrule{\heavyrulewidth}{\doublerulesep}{0.4em}}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
+\usepackage{emptypage}
+\usepackage{etoolbox}
+\patchcmd{\chapter}{plain}{plain}{}{}
+\usepackage{hyperref}
+\setlength{\belowcaptionskip}{-10pt}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\usepackage{booktabs,caption}
+\usepackage[flushleft]{threeparttable}
+\usepackage{acronym} 
+
+%this package is just useful for the template 
+
+\usepackage{lipsum}  
+
+\begin{document}
+	\begin{titlepage}
+	\centering
+	%\vspace*{1cm}
+	\Large
+	\textsc{University Name \\ The name of the Institute \\ Department of Something or Other} \\ \vspace*{1\baselineskip}
+	
+	\includegraphics[width=0.25\textwidth,height=0.25\textheight,keepaspectratio]{uj_logo.jpg}
+	
+	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+	\Huge  The title of your thesis. Encompassing everything you have done in a short and interesting way. \\ 
+	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+	
+	\Large{Doctoral thesis \\ \textit{submitted by}}
+	\vspace*{1\baselineskip}
+	
+	\LARGE \textbf{Name Surname} \\
+		\vspace*{1\baselineskip}
+
+	\Large{\textit{supervised by:} \\ prof. Name Surname \\}
+		
+	\vspace*{2\baselineskip}
+	\Large{City, Year}
+	
+    \end{titlepage}
+\shipout\null
+\newpage
+\thispagestyle{empty}
+\vspace*{30px}
+\begin{flushleft}
+\large{Department Name\\
+University name}
+\end{flushleft}
+\vspace*{1\baselineskip}
+
+
+\hspace{5.31cm}{\textbf{\Large{Declaration}}
+
+\vspace*{15px}
+
+{\large{\lipsum[5]
+
+\lipsum[12]
+
+\vspace*{25px}
+\begin{center}
+	\begin{tabular}{lr}
+		................................~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&
+		.......................................... \\
+		{~~~~~~~~City, date} & {Your signature~~~~~~~}
+	\end{tabular}
+\end{center}
+\noindent \hfill 
+
+
+\noindent  \hfill }}}
+\\
+
+%the numbering should be different in the sections before the main body of the dissertation
+
+
+\pagenumbering{roman}
+\setcounter{page}{0}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\include{chapters/acknowledgements}  
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Acknowledgements in another language}
+\include{chapters/Acknowledgements2}  
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\include{chapters/abstract}  
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract in another language}
+\include{chapters/Abstract2}   
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Acronyms}
+\include{chapters/acronyms}         
+
+%the style of numbering of pages
+
+\pagenumbering{arabic}
+
+%you can add some chapters 
+
+\tableofcontents
+
+%you can add some chapters 
+
+\include{chapters/introduction}
+\include{chapters/experimental}
+\include{chapters/goal}
+\include{chapters/results}
+\include{chapters/conclusions}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+
+
+%the bibliography style that you use
+\bibliographystyle{ieeetr}
+
+%the file which contains your references
+
+\fancypagestyle{plain}{%
+	\renewcommand{\headrulewidth}{0pt}%
+	\fancyhf{}
+	\fancyfoot[R]{\thepage}}
+\bibliography{library.bib}
+
+%It is good to have some appendix in your thesis - at least one
+
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Appendix: Academic achievements}
+\appendix
+\include{chapters/appendix}
+
+
+
+\end{document}

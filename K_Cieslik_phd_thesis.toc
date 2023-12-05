@@ -1,0 +1,26 @@
+\babel@toc {english}{}\relax 
+\thispagestyle {empty}
+\contentsline {chapter}{Acknowledgements}{i}{section*.1}%
+\contentsline {chapter}{Acknowledgements in another language}{ii}{section*.3}%
+\contentsline {chapter}{Abstract}{iii}{section*.5}%
+\contentsline {chapter}{Abstract in another language}{iv}{section*.7}%
+\contentsline {chapter}{Acronyms}{v}{section*.9}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Thesis structure}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Motivations}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Some section with an equation and citations}{2}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}A subsection}{2}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}Some section with a figure}{2}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Experimental}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Something about the experiment }{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}A subsection with a table }{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}A giant complicated table for a whole page}{5}{subsection.2.1.2}%
+\contentsline {chapter}{\numberline {3}Goals of the thesis}{7}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Results}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Some section}{8}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Its first subsection}{8}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Its second subsection}{9}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Another section}{9}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusions}{10}{chapter.5}%
+\contentsline {chapter}{Bibliography}{11}{section*.12}%
+\contentsline {chapter}{Appendix: Academic achievements}{12}{section*.14}%
