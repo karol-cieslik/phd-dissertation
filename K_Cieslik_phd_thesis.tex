@@ -1,87 +1,97 @@
-% Dissertation LaTeX Template
+% PhD dissertation template
 % Author: Karol Cieslik
-% LinkedIn: https://www.linkedin.com/in/karolcieslik/
-% I have developed this template over the years.
-% I hope that it will be useful for others. 
-% It works both for thesis in English and in Polish.
+% English and Polish example for a physics dissertation.
+%
+% The template is intentionally based on the standard report class so it is
+% straightforward to adapt. Check your faculty's current submission rules
+% before using the layout for a final deposit.
 
-\documentclass[11pt,twoside]{report}
-\usepackage[left=35mm,top=25mm,right=25mm,bottom=25mm]{geometry}
+\documentclass[12pt,twoside]{report}
+
+% Page layout: extra binding space on the inner edge for duplex printing.
+\usepackage[a4paper,inner=35mm,outer=25mm,top=25mm,bottom=25mm,headheight=14pt]{geometry}
 \usepackage{indentfirst}
-\usepackage{polski}
-\usepackage[polish,english]{babel}
-\usepackage{amsmath} % Required for some math elements 
-\usepackage[titletoc]{appendix}
-\usepackage{rotating} 
-\usepackage[
-protrusion=true,
-activate={true,nocompatibility},
-final,
-tracking=true,
-kerning=true,
-spacing=true,
-factor=1100]{microtype}
-\SetTracking{encoding={*}, shape=sc}{40}
-\newsavebox{\myhbar}
-\savebox{\myhbar}{$\hbar$}
-\renewcommand*{\hbar}{\mathalpha{\usebox{\myhbar}}}
-\usepackage[utf8]{inputenc}
-\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
-\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
-\usepackage{graphicx} % Required for the inclusion of images
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{fancyhdr} % Custom headers and footers
-\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
-\setlength\parindent{0.75cm}
+\setlength{\parindent}{0.75cm}
 \linespread{1.15}
-\fancyhf{} 
-\fancyfoot[R]{\thepage}
-\pagestyle{fancy}
-\fancyhead[L]{\scshape\nouppercase{\rightmark}}
-\setlength{\headheight}{13pt} 
-\usepackage{titlesec}
- \titleformat{\chapter}[display]   
-{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
-\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
-\usepackage{caption}
-\usepackage[font={small}]{caption}
-\usepackage{enumerate}
-\usepackage{multirow}
- \graphicspath{{wykresy/}}
-   \usepackage[unicode=true]{hyperref}
-\renewcommand\refname{Bibliografia}
-\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 
 
-% In the SI package you can declare your own units which comes in handy
-\DeclareSIUnit{\ions}{ions} 
-\DeclareSIUnit{\langmuir}{L} 
+% Language and typography. The last babel language is the default.
+\usepackage[polish,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
 
+% Mathematics, chemistry, and physical units.
+\usepackage{amsmath}
+\usepackage[version=3]{mhchem}
+\usepackage{siunitx}
+\DeclareSIUnit{\ions}{ions}
+\DeclareSIUnit{\langmuir}{L}
 
-
-\usepackage{hypcap}
+% Figures, tables, and rotated material.
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage[font=small,labelfont=bf]{caption}
 \usepackage{booktabs}
-\newcommand\doubleRule{\toprule\toprule}
-\newcommand\doublerule{\toprule\specialrule{\heavyrulewidth}{\doublerulesep}{0.4em}}
-\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
-\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
-\usepackage{emptypage}
-\usepackage{etoolbox}
-\patchcmd{\chapter}{plain}{plain}{}{}
-\usepackage{hyperref}
-\setlength{\belowcaptionskip}{-10pt}
-\usepackage{enumitem}
-\setlist[itemize]{noitemsep, topsep=0pt}
-\usepackage{booktabs,caption}
 \usepackage[flushleft]{threeparttable}
-\usepackage{acronym} 
+\usepackage{enumitem}
+\usepackage{acronym}
 
-%this package is just useful for the template 
+% Page furniture and restrained heading styling.
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\definecolor{ThesisInk}{HTML}{24364B}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\color{ThesisInk}}
+  {\filleft\Large\chaptertitlename\ \thechapter}
+  {1ex}
+  {\titlerule\vspace{1ex}\filright\Huge}
+\titleformat{name=\chapter,numberless}[display]
+  {\normalfont\bfseries\color{ThesisInk}}
+  {}
+  {0pt}
+  {\titlerule\vspace{1ex}\Huge}
+\titlespacing*{\chapter}{0pt}{-12pt}{24pt}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{ThesisInk}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{ThesisInk}}
+  {\thesubsection}{1em}{}
 
-\usepackage{lipsum}  
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[LO]{\small\scshape\nouppercase{\rightmark}}
+\fancyhead[RE]{\small\scshape\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}}
+\setlist[itemize]{topsep=4pt,itemsep=2pt}
+\setlength{\belowcaptionskip}{3pt}
+
+% Small helpers used by the examples below.
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\doublerule}{\toprule\specialrule{\heavyrulewidth}{\doublerulesep}{0.4em}}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+% Load hyperref after packages that affect headings, captions, or links.
+\usepackage[unicode=true,pdfusetitle]{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=ThesisInk,
+  citecolor=ThesisInk,
+  urlcolor=ThesisInk
+}
+
+% Lorem ipsum is used only to make the example document compile with sample text.
+\usepackage{lipsum}
 
 \begin{document}
-	\begin{titlepage}
+\pagenumbering{roman}
+\begin{titlepage}
+\thispagestyle{empty}
 	\centering
 	%\vspace*{1cm}
 	\Large
@@ -105,38 +115,33 @@ factor=1100]{microtype}
 	\Large{City, Year}
 	
     \end{titlepage}
-\shipout\null
-\newpage
+\clearpage
 \thispagestyle{empty}
-\vspace*{30px}
-\begin{flushleft}
-\large{Department Name\\
-University name}
-\end{flushleft}
-\vspace*{1\baselineskip}
+\begin{center}
+  {\Large\bfseries Declaration}
+\end{center}
+\vspace{1.5\baselineskip}
 
+\noindent
+\textbf{Department Name}\\
+University Name
 
-\hspace{5.31cm}{\textbf{\Large{Declaration}}
+\vspace{1.5\baselineskip}
+\noindent
+\lipsum[5]
 
-\vspace*{15px}
-
-{\large{\lipsum[5]
-
+\medskip
+\noindent
 \lipsum[12]
 
-\vspace*{25px}
-\begin{center}
-	\begin{tabular}{lr}
-		................................~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&
-		.......................................... \\
-		{~~~~~~~~City, date} & {Your signature~~~~~~~}
-	\end{tabular}
-\end{center}
-\noindent \hfill 
+\vspace{2\baselineskip}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll@{}}
+  \rule{0.38\textwidth}{0.4pt} & \rule{0.38\textwidth}{0.4pt} \\
+  City, date & Your signature
+\end{tabular*}
 
-
-\noindent  \hfill }}}
-\\
+\clearpage
 
 %the numbering should be different in the sections before the main body of the dissertation
 
@@ -151,7 +156,7 @@ University name}
 \clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{Acknowledgements in another language}
-\include{chapters/Acknowledgements2}  
+\include{chapters/acknowledgements2}  
 \clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{Abstract}
@@ -159,7 +164,7 @@ University name}
 \clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{Abstract in another language}
-\include{chapters/Abstract2}   
+\include{chapters/abstract2}   
 \clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{Acronyms}
@@ -167,9 +172,10 @@ University name}
 
 %the style of numbering of pages
 
+% Main text uses Arabic numbering, starting at page 1.
 \pagenumbering{arabic}
 
-%you can add some chapters 
+% Add or remove chapters as needed 
 
 \tableofcontents
 
@@ -183,7 +189,7 @@ University name}
 
 \clearpage
 \phantomsection
-\addcontentsline{toc}{chapter}{Bibliography}
+\addcontentsline{toc}{chapter}{\bibname}
 
 
 %the bibliography style that you use
@@ -191,10 +197,6 @@ University name}
 
 %the file which contains your references
 
-\fancypagestyle{plain}{%
-	\renewcommand{\headrulewidth}{0pt}%
-	\fancyhf{}
-	\fancyfoot[R]{\thepage}}
 \bibliography{library.bib}
 
 %It is good to have some appendix in your thesis - at least one
@@ -202,7 +204,6 @@ University name}
 
 \clearpage
 \phantomsection
-\addcontentsline{toc}{chapter}{Appendix: Academic achievements}
 \appendix
 \include{chapters/appendix}
 
