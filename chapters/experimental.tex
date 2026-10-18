@@ -12,7 +12,7 @@
 
 
 \vspace{7pt}
-\begin{table}[!h]
+\begin{table}[!htbp]
 	\centering
 	\ra{1.1}
 	\caption{The comparison of published desorption energy and pre-exponential factor of 6P multilayer with the ones obtained from manual linear heating and passive cooling of the 6P powder. The values of kinetic parameters calculated using heating curves obtained based on different assumptions.}
@@ -51,12 +51,13 @@
 \begingroup
 \renewcommand*{\arraystretch}{1.4}
 
-\begin{sidewaystable}[]
+\begin{sidewaystable}[p]
 	\centering
 	\ra{1.1}	
 	\caption{Summary of the used annealing methods describing their characteristics in the context of oxide reduction experiments.}
 	\label{annealing-summary}
-	\resizebox{\textwidth}{!}{%
+	\begin{threeparttable}
+	\resizebox{\textheight}{!}{%
 		\begin{tabular}{@{}lllllll@{}}\doublerule
 			Annealing method                                                          & Sample                                                            & Max temp. of sample                                                                                                                                                                     & Temp. uniformity                                                                   & Temp. of getter                                                                                                       & Cleanliness                                                                & ELOP usefulness                                                   \\ \midrule
 			\begin{tabular}[c]{@{}l@{}}Current through\\ sample \\ \\ \phantom{empty}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Monocrystal\\ \\ \\ \phantom{empty}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Depending on type of crystals\\ and luck, for \ce{TiO2} on\\ Si \textgreater{}\SI{1350}{\degreeCelsius}, for \ce{SrTiO3} on Si \SI{1250}{\degreeCelsius}\\ was achieved\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Relatively uniform\\ below \SI{1050}{\degreeCelsius}\\ (approx. \SI{30}{\degreeCelsius})\\ \\ \phantom{empty}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Unknown, but higher\\ than the studied\\ sample's*\\ \phantom{empty}\end{tabular}                                   & \begin{tabular}[c]{@{}l@{}}Clean\\ \\ \\ \phantom{empty}\end{tabular}                & \begin{tabular}[c]{@{}l@{}}Useful \\ \\ \\ \phantom{empty}\end{tabular}     \\ \hline
@@ -69,7 +70,8 @@
 			\item *The temperature measurement is performed using a pyrometer and the getter crystal is placed under the studied crystal, so its temperature cannot be measured. The getter's temperature is higher than the sample's temperature, as indicated by the color of glowing and the fact that it partially melts even when the temperature of the sample is lower than the getter's melting temperature. 
 			\item **The experiments have shown that the getter should have much higher temperature than the perovskite crystal in the study of the growth of nanostructures. When the getter temperature is raised enough for the getter to be active, the temperature of the crystal is so high that the structures are badly defined and contaminated. 
 			\item ***The annealing in this method is due to radiation from tungsten wires. It must      be noted that at      high temperatures, tungsten wires begin to sublimate. Contamination with heavy metals was  observed on the surface of monocrystals at high currents passing through wires in another heating system based on the same principle.
-		\end{tablenotes}	
+		\end{tablenotes}
+	\end{threeparttable}
 \end{sidewaystable}
 
 \endgroup
