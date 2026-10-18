@@ -143,11 +143,7 @@ University Name
 
 \clearpage
 
-%the numbering should be different in the sections before the main body of the dissertation
-
-
-\pagenumbering{roman}
-\setcounter{page}{0}
+% The title and declaration are roman-numbered front matter pages.
 
 \clearpage
 \phantomsection
@@ -172,15 +168,11 @@ University Name
 
 %the style of numbering of pages
 
-% Main text uses Arabic numbering, starting at page 1.
-\pagenumbering{arabic}
-
-% Add or remove chapters as needed 
-
+% The table of contents remains part of the roman-numbered front matter.
 \tableofcontents
 
-%you can add some chapters 
-
+% Main text uses Arabic numbering, starting at page 1.
+\pagenumbering{arabic}
 \include{chapters/introduction}
 \include{chapters/experimental}
 \include{chapters/goal}
