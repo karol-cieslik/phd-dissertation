@@ -2,7 +2,7 @@
 
 An unofficial, editable starting point for a physics dissertation. It demonstrates a two-sided thesis layout, bilingual English/Polish front matter, scientific notation, figures, tables, citations, and an appendix.
 
-This is a personal template, not an official University of Jagiellonian template. University and faculty requirements change and may differ by discipline. Check the current instructions from your doctoral school or faculty before submitting a thesis. In particular, confirm the required title-page wording, margins, pagination, spacing, and accessibility rules.
+This is a personal template, not an official Jagiellonian University template. University and faculty requirements change and may differ by discipline. Check the current instructions from your doctoral school or faculty before submitting a thesis. In particular, confirm the required title-page wording, margins, pagination, spacing, and accessibility rules.
 
 ## Build the PDF
 
