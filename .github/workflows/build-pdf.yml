@@ -1,0 +1,31 @@
+name: Build dissertation PDF
+
+on:
+  push:
+    branches:
+      - main
+      - codex/thesis-template-refresh
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Build with pdfLaTeX and BibTeX
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: K_Cieslik_phd_thesis.tex
+          args: -pdf -file-line-error -interaction=nonstopmode
+      - name: Publish the compiled PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: phd-dissertation-pdf
+          path: K_Cieslik_phd_thesis.pdf
+          if-no-files-found: error
+          retention-days: 14
