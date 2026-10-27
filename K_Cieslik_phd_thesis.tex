@@ -76,9 +76,22 @@
 \newcommand{\doublerule}{\toprule\specialrule{\heavyrulewidth}{\doublerulesep}{0.4em}}
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 
+% Edit these fields before writing your dissertation. They populate both the
+% visible title page and the PDF document metadata.
+\newcommand{\thesisuniversity}{University Name}
+\newcommand{\thesisinstitute}{The name of the Institute}
+\newcommand{\thesisdepartment}{Department of Something or Other}
+\newcommand{\thesistitle}{The title of your thesis. Encompassing everything you have done in a short and interesting way.}
+\newcommand{\thesisauthor}{Name Surname}
+\newcommand{\thesissupervisor}{prof. Name Surname}
+\newcommand{\thesiscityyear}{City, Year}
+
 % Load hyperref after packages that affect headings, captions, or links.
-\usepackage[unicode=true,pdfusetitle]{hyperref}
+\usepackage[unicode=true]{hyperref}
 \hypersetup{
+  pdftitle={\thesistitle},
+  pdfauthor={\thesisauthor},
+  pdfsubject={Doctoral dissertation},
   colorlinks=true,
   linkcolor=ThesisInk,
   citecolor=ThesisInk,
@@ -91,30 +104,32 @@
 \begin{document}
 \pagenumbering{roman}
 \begin{titlepage}
-\thispagestyle{empty}
-	\centering
-	%\vspace*{1cm}
-	\Large
-	\textsc{University Name \\ The name of the Institute \\ Department of Something or Other} \\ \vspace*{1\baselineskip}
-	
-	\includegraphics[width=0.25\textwidth,height=0.25\textheight,keepaspectratio]{uj_logo.jpg}
-	
-	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-	\Huge  The title of your thesis. Encompassing everything you have done in a short and interesting way. \\ 
-	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
-	
-	\Large{Doctoral thesis \\ \textit{submitted by}}
-	\vspace*{1\baselineskip}
-	
-	\LARGE \textbf{Name Surname} \\
-		\vspace*{1\baselineskip}
+  \thispagestyle{empty}
+  \centering
+  {\large\textsc{\thesisuniversity\\[0.2em]
+    \thesisinstitute\\[0.2em]\thesisdepartment}\par}
 
-	\Large{\textit{supervised by:} \\ prof. Name Surname \\}
-		
-	\vspace*{2\baselineskip}
-	\Large{City, Year}
-	
-    \end{titlepage}
+  \vspace{0.8cm}
+  \includegraphics[width=0.20\textwidth,height=0.18\textheight,
+    keepaspectratio]{uj_logo.jpg}\par
+
+  \vfill
+  \horrule{0.5pt}\par
+  \vspace{0.35cm}
+  {\LARGE\thesistitle\par}
+  \vspace{0.35cm}
+  \horrule{1.2pt}\par
+
+  \vfill
+  {\large Doctoral thesis\\[0.2em]\textit{submitted by}\par}
+  \vspace{0.65cm}
+  {\Large\textbf{\thesisauthor}\par}
+  \vspace{0.65cm}
+  {\large\textit{supervised by:}\\[0.2em]\thesissupervisor\par}
+
+  \vfill
+  {\large\thesiscityyear\par}
+\end{titlepage}
 \clearpage
 \thispagestyle{empty}
 \begin{center}
