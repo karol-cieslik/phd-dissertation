@@ -186,7 +186,9 @@ University Name
 % The table of contents remains part of the roman-numbered front matter.
 \tableofcontents
 
-% Main text uses Arabic numbering, starting at page 1.
+% Flush the contents page before resetting the page counter; otherwise
+% the last contents page gets an Arabic number and Chapter 1 starts at page 2.
+\clearpage
 \pagenumbering{arabic}
 \include{chapters/introduction}
 \include{chapters/experimental}
