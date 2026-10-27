@@ -14,3 +14,7 @@ After going through this template you will know how to:
 - and many more things.
 
   Now you just need to fill it with data and text and you can get your PhD in no time!
+
+## Build the PDF
+
+See [BUILDING.md](BUILDING.md) for supported compilation tools, dependency setup, and troubleshooting. A GitHub Actions workflow checks whether the latest source builds on Linux.
