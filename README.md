@@ -43,3 +43,9 @@ The preamble is grouped by purpose: page layout; language and typography; maths,
 The refreshed layout keeps a restrained serif body, clear chapter and section hierarchy, generous binding-side margin for two-sided printing, consistent running heads, and a muted ink-blue accent for headings and links. Figures and tables should remain legible at print size, use descriptive captions, and stay within the text area. The accent color may be changed to black if required for print or institutional submission.
 
 The exact layout is deliberately easy to adapt. The current values are examples, not a claim of compliance with any university's rules.
+
+## License and attribution
+
+Original template source code and documentation: **Copyright © 2026 Karol Cieślik**, licensed under the [MIT License](LICENSE). If you redistribute substantial parts of the source, retain its copyright and license notice. You are **not** required to cite the template in your dissertation merely for using it, though a link to this repository is appreciated.
+
+**Important:** The university crest and currently unverified example figures are **not** covered by the MIT license. See [Image and asset rights](ASSET_RIGHTS.md) before redistributing or reusing them. Institutional insignia do not imply official endorsement.
