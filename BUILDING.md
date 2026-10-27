@@ -17,7 +17,7 @@ Install a full TeX distribution or at least pdfLaTeX, BibTeX, `latexmk`, Latin M
 On Debian/Ubuntu systems with appropriate repositories enabled, the relevant TeX Live collections are typically:
 
 ```sh
-sudo apt-get install latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-lang-polish texlive-science
+sudo apt-get install latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern texlive-lang-polish texlive-science
 ```
 
 Build with:

@@ -2,6 +2,7 @@ name: Build dissertation PDF
 
 on:
   push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -13,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Install TeX Live tools and packages
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             latexmk poppler-utils texlive-latex-recommended \
-            texlive-latex-extra texlive-fonts-recommended \
+            texlive-latex-extra texlive-fonts-recommended lmodern \
             texlive-lang-polish texlive-science
       - name: Remove historical build outputs
         run: latexmk -C K_Cieslik_phd_thesis.tex
@@ -31,7 +32,7 @@ jobs:
           pdfinfo K_Cieslik_phd_thesis.pdf | grep -q '(A4)'
       - name: Upload example PDF
         if: success()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: dissertation-sample-pdf
           path: K_Cieslik_phd_thesis.pdf
